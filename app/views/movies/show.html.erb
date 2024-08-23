@@ -1,0 +1,15 @@
+<h1> Movie Show Page </h1>
+
+
+
+<p> <%= button_to "Create a Viewing Party", new_user_movie_viewing_party_path(@user.id, @movie_id) %>  </p>
+<p> <%= button_to "Return to Discover Page",  user_discover_index_path(@user.id), method: :get %> </p>
+
+
+<%= @movie_details.title %>
+<%= @movie_details.vote_average %>
+<%= @movie_details.runtime %>
+<%= @movie_details.genres %>
+
+
+

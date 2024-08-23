@@ -1,8 +1,8 @@
 <h1>Hi <%=@user.name%>, Please Discover Movies!</h1>
 
-<p><%= link_to "Discover Top Rated Movies", url: user_movies_path(@user.id) %></p>
+<p><%= link_to "Discover Top Rated Movies", user_movies_path(@user.id) %></p>
 
-<%= form_with url: user_movies_path(@user.id), local: true do |form| %>
+<%= form_with url: user_movies_path(@user.id), method: :get, local: true do |form| %>
   <%= form.label :movie_title, "Enter Movie Title" %>
   <%= form.text_field :movie_title %>
   <%= form.submit 'Search by Movie Title' %>

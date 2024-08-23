@@ -1,0 +1,12 @@
+<h1>List of Movies!</h1>
+
+<% @movies_details.each do |movie| %>
+  <div id="movie">
+    <li><%= link_to "#{movie.title}", user_movie_path(@user.id, movie.movie_id) %></li>
+  </div>
+  <div id="vote_average">
+    <p><%= movie.vote_average %></p>
+  </div>
+<% end %>
+
+<%= button_to "Return to Discover Page", user_discover_index_path(@user.id), method: :get %>
